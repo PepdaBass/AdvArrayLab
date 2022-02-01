@@ -200,8 +200,40 @@ console.log("Dishes with even servings numbers: ", evenServings);
 //5. Create a function that will return dishes whose ingredients array is "tomato" and "cheese".
 //Filter
 
+function problemFive(){
+    let results = dishes.filter(function(tc){
+        if(tc.ingredients.includes("tomato") && tc.ingredients.includes("cheese")){
+            return true;
+        }
+        else{
+            return false;
+        }
+    })
+    return results;
+}
+
+let tomCheese = problemFive();
+console.log("Dishes with tomato and cheese: ", tomCheese);
+
 //6a. Create a function that will return an array of only the names of the cuisine types. Ie ['Pizza', 'Spaghetti', ...]
 //Map
+
+function problemSix(name){
+    let cuisines = name.map(function(element){
+        return element.name;
+    })
+    return cuisines;
+}
+
+let cuisineTypes = problemSix(dishes);
+console.log(cuisineTypes);
+
+   // let cuisineTypes = [];
+    // for(let i = 0; i < name.length; i++){
+    //     cuisineTypes.push(name["name"]);
+    // }
+    // return cuisineTypes
+
 // BONUS: (come back to this after finishing all)
 //6b. Use the filter method to eliminate duplicates, leaving only distinct values in the array
 
